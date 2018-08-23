@@ -12,7 +12,7 @@ class VC_Channel: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Ancho de slide
+        //Ancho de slidegit 
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
     }
 
