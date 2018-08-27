@@ -18,6 +18,7 @@
 		AE832546212E6F62004FCDD6 /* View_Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE832545212E6F62004FCDD6 /* View_Gradient.swift */; };
 		AEAC85F0212F5853005A872E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAC85EF212F5853005A872E /* Constants.swift */; };
 		AEE518572133367A00F214D5 /* VC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE518562133367A00F214D5 /* VC_Login.swift */; };
+		AEE518592133471300F214D5 /* VC_NewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE518582133471300F214D5 /* VC_NewAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AE832545212E6F62004FCDD6 /* View_Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View_Gradient.swift; sourceTree = "<group>"; };
 		AEAC85EF212F5853005A872E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Smack/Utilities/Constants.swift; sourceTree = SOURCE_ROOT; };
 		AEE518562133367A00F214D5 /* VC_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Login.swift; sourceTree = "<group>"; };
+		AEE518582133471300F214D5 /* VC_NewAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_NewAccount.swift; sourceTree = "<group>"; };
 		B5951AE0804182652F9751EC /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFAF2C39F02C6A291011E0E /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				AE6E6E00212BD08F00E2D64D /* VC_Chat.swift */,
 				AE6E6E02212BD0F100E2D64D /* VC_Channel.swift */,
 				AEE518562133367A00F214D5 /* VC_Login.swift */,
+				AEE518582133471300F214D5 /* VC_NewAccount.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				AE6E6E01212BD08F00E2D64D /* VC_Chat.swift in Sources */,
 				AE578D542129D106008AFBB8 /* AppDelegate.swift in Sources */,
 				AE736FB5212D1DFC00DB311E /* SWRevealViewController.m in Sources */,
+				AEE518592133471300F214D5 /* VC_NewAccount.swift in Sources */,
 				AEAC85F0212F5853005A872E /* Constants.swift in Sources */,
 				AEE518572133367A00F214D5 /* VC_Login.swift in Sources */,
 			);

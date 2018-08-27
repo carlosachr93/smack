@@ -249,6 +249,10 @@
                                 <rect key="frame" x="74.5" y="399" width="226" height="27"/>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
                                 <state key="normal" title="No tienes cuenta? Registrate aqui"/>
+                                <connections>
+                                    <action selector="btnNewAccount_Pressed:" destination="AdE-R0-ve7" eventType="touchUpInside" id="N1f-gw-viL"/>
+                                    <segue destination="yjA-A0-ZjN" kind="show" identifier="toNewAccount" id="8jf-yj-PSP"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="251-Wq-bX7">
                                 <rect key="frame" x="62.5" y="190" width="250" height="114"/>
@@ -327,6 +331,150 @@
                 <exit id="1qC-un-j2h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1762.4000000000001" y="-195.6521739130435"/>
+        </scene>
+        <!--New Account-->
+        <scene sceneID="g9h-0m-5DE">
+            <objects>
+                <viewController id="yjA-A0-ZjN" customClass="VC_NewAccount" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oUt-IM-qSH"/>
+                        <viewControllerLayoutGuide type="bottom" id="fzI-UG-G67"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2GJ-pP-elp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uot-Xp-uMr">
+                                <rect key="frame" x="331" y="28" width="28" height="28"/>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="btnClose_Pressed:" destination="yjA-A0-ZjN" eventType="touchUpInside" id="Pu1-BA-iKW"/>
+                                    <action selector="btnClose_Pressed:" destination="AdE-R0-ve7" eventType="touchUpInside" id="ePo-Qj-vIe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registrate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CsA-ND-prN">
+                                <rect key="frame" x="133" y="70" width="108" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="22"/>
+                                <color key="textColor" red="0.25996482370000001" green="0.32801789050000002" blue="0.7236505151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5JQ-g0-X7D">
+                                <rect key="frame" x="62" y="180.5" width="250" height="176"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XIJ-uR-jUO">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="axZ-dv-8Kl"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.25996482370000001" green="0.32801789050000002" blue="0.7236505151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Em6-gQ-Qg9">
+                                        <rect key="frame" x="0.0" y="50" width="250" height="2"/>
+                                        <color key="backgroundColor" red="0.38544754489999999" green="0.72238738170000005" blue="0.87435116530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="CkT-Bj-nsb"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XmX-sY-r8l">
+                                        <rect key="frame" x="0.0" y="62" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PRM-Va-4lf"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.25996482370000001" green="0.32801789050000002" blue="0.7236505151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1AY-yK-paI">
+                                        <rect key="frame" x="0.0" y="112" width="250" height="2"/>
+                                        <color key="backgroundColor" red="0.38544754489999999" green="0.72238738170000005" blue="0.87435116530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="D3l-Kw-MRK"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-cN-WI2">
+                                        <rect key="frame" x="0.0" y="124" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="C4r-XJ-Xhw"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.25996482370000001" green="0.32801789050000002" blue="0.7236505151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRF-57-5KI">
+                                        <rect key="frame" x="0.0" y="174" width="250" height="2"/>
+                                        <color key="backgroundColor" red="0.38544754489999999" green="0.72238738170000005" blue="0.87435116530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="q7X-gm-F8x"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="F2C-si-yGy">
+                                <rect key="frame" x="140" y="401.5" width="95" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3Zr-5O-MDe"/>
+                                    <constraint firstAttribute="width" constant="95" id="CXa-29-G3Y"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0N-l3-dHr">
+                                <rect key="frame" x="117" y="401.5" width="141" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="az7-xv-V1J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
+                                <state key="normal" title="Selecciona un avatar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-2G-l1p">
+                                <rect key="frame" x="98" y="501.5" width="179" height="27"/>
+                                <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
+                                <state key="normal" title="Genera un Color de Fondo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF0-TA-SeO">
+                                <rect key="frame" x="63" y="597" width="250" height="40"/>
+                                <color key="backgroundColor" red="0.38544754489999999" green="0.72238738170000005" blue="0.87435116530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="16G-nM-wK6"/>
+                                    <constraint firstAttribute="width" constant="250" id="7VR-t9-mUF"/>
+                                    <constraint firstAttribute="height" constant="40" id="KEo-op-oSz"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="X1u-mF-fdm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="18"/>
+                                <state key="normal" title="Crear Cuenta">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5JQ-g0-X7D" firstAttribute="leading" secondItem="2GJ-pP-elp" secondAttribute="leadingMargin" constant="46.5" id="3Cg-Bl-AeG"/>
+                            <constraint firstItem="F2C-si-yGy" firstAttribute="centerX" secondItem="2GJ-pP-elp" secondAttribute="centerX" id="6bp-FG-PTg"/>
+                            <constraint firstItem="uot-Xp-uMr" firstAttribute="top" secondItem="oUt-IM-qSH" secondAttribute="bottom" constant="8" id="Exs-oW-HLT"/>
+                            <constraint firstItem="5JQ-g0-X7D" firstAttribute="top" secondItem="CsA-ND-prN" secondAttribute="bottom" constant="80" id="Gg8-Vc-jMp"/>
+                            <constraint firstItem="bgv-2G-l1p" firstAttribute="top" secondItem="m0N-l3-dHr" secondAttribute="bottom" constant="5" id="NDd-KH-ESb"/>
+                            <constraint firstItem="F2C-si-yGy" firstAttribute="top" secondItem="5JQ-g0-X7D" secondAttribute="bottom" constant="45" id="NmF-ot-THk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5JQ-g0-X7D" secondAttribute="trailing" constant="46.5" id="VSc-O8-sxp"/>
+                            <constraint firstItem="fzI-UG-G67" firstAttribute="top" secondItem="pF0-TA-SeO" secondAttribute="bottom" constant="30" id="djc-pO-T3t"/>
+                            <constraint firstItem="5JQ-g0-X7D" firstAttribute="centerX" secondItem="2GJ-pP-elp" secondAttribute="centerX" id="efc-75-R84"/>
+                            <constraint firstItem="CsA-ND-prN" firstAttribute="top" secondItem="oUt-IM-qSH" secondAttribute="bottom" constant="50" id="o8D-VD-S6G"/>
+                            <constraint firstItem="m0N-l3-dHr" firstAttribute="centerX" secondItem="F2C-si-yGy" secondAttribute="centerX" id="oKV-SV-ihm"/>
+                            <constraint firstItem="m0N-l3-dHr" firstAttribute="top" secondItem="F2C-si-yGy" secondAttribute="top" id="qZM-Gx-Qew"/>
+                            <constraint firstItem="m0N-l3-dHr" firstAttribute="top" secondItem="F2C-si-yGy" secondAttribute="bottom" constant="25" id="sGn-lB-mDh"/>
+                            <constraint firstItem="CsA-ND-prN" firstAttribute="centerX" secondItem="2GJ-pP-elp" secondAttribute="centerX" id="u2D-cC-Num"/>
+                            <constraint firstItem="uot-Xp-uMr" firstAttribute="trailing" secondItem="2GJ-pP-elp" secondAttribute="trailingMargin" id="uvj-iu-c1y"/>
+                            <constraint firstItem="bgv-2G-l1p" firstAttribute="centerX" secondItem="m0N-l3-dHr" secondAttribute="centerX" id="wdB-tJ-pUe"/>
+                            <constraint firstItem="pF0-TA-SeO" firstAttribute="centerX" secondItem="bgv-2G-l1p" secondAttribute="centerX" id="x7K-uI-ngu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="jAq-D1-dbe" kind="unwind" identifier="unwindToSegue" unwindAction="prepareForUnwindWithSegue:" id="eVW-og-fjo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwu-KK-MDk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jAq-D1-dbe" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2656.8000000000002" y="-583.3583208395803"/>
         </scene>
     </scenes>
     <resources>
