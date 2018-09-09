@@ -233,7 +233,7 @@
                                     <action selector="btnClose_Pressed:" destination="AdE-R0-ve7" eventType="touchUpInside" id="KZr-16-QRv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toy-p5-aVX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toy-p5-aVX" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62" y="354" width="250" height="40"/>
                                 <color key="backgroundColor" red="0.38544754489999999" green="0.72238738170000005" blue="0.87435116530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -244,6 +244,11 @@
                                 <state key="normal" title="Iniciar Sesión">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYt-Yj-wpt">
                                 <rect key="frame" x="74.5" y="399" width="226" height="27"/>
@@ -368,7 +373,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25996482370000001" green="0.32801789050000002" blue="0.7236505151" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Em6-gQ-Qg9">
                                         <rect key="frame" x="0.0" y="50" width="250" height="2"/>
@@ -425,13 +430,19 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
                                 <state key="normal" title="Selecciona un avatar"/>
+                                <connections>
+                                    <action selector="btnAvatar_pressed:" destination="yjA-A0-ZjN" eventType="touchUpInside" id="WTL-A2-jUb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-2G-l1p">
                                 <rect key="frame" x="98" y="501.5" width="179" height="27"/>
                                 <fontDescription key="fontDescription" name="ZapfDingbatsITC" family="Zapf Dingbats" pointSize="15"/>
                                 <state key="normal" title="Genera un Color de Fondo"/>
+                                <connections>
+                                    <action selector="btnBackgroundColor_Pressed:" destination="yjA-A0-ZjN" eventType="touchUpInside" id="Q7H-4j-5IO"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF0-TA-SeO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pF0-TA-SeO" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="63" y="597" width="250" height="40"/>
                                 <color key="backgroundColor" red="0.38544754489999999" green="0.72238738170000005" blue="0.87435116530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -444,6 +455,9 @@
                                 <state key="normal" title="Crear Cuenta">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnCrearCuenta_Pressed:" destination="yjA-A0-ZjN" eventType="touchUpInside" id="vfL-Qp-iXu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -468,6 +482,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgPerfil" destination="F2C-si-yGy" id="Emx-w6-tdZ"/>
+                        <outlet property="txtEmail" destination="XIJ-uR-jUO" id="huH-3z-cLm"/>
+                        <outlet property="txtPassword" destination="9RE-cN-WI2" id="lHa-qa-g6T"/>
+                        <outlet property="txtUsername" destination="XmX-sY-r8l" id="PNR-6o-vCR"/>
                         <segue destination="jAq-D1-dbe" kind="unwind" identifier="unwindToSegue" unwindAction="prepareForUnwindWithSegue:" id="eVW-og-fjo"/>
                     </connections>
                 </viewController>

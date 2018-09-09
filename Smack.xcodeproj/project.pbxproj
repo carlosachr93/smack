@@ -12,6 +12,9 @@
 		AE578D592129D106008AFBB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE578D572129D106008AFBB8 /* Main.storyboard */; };
 		AE578D5B2129D10E008AFBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE578D5A2129D10E008AFBB8 /* Assets.xcassets */; };
 		AE578D5E2129D10E008AFBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE578D5C2129D10E008AFBB8 /* LaunchScreen.storyboard */; };
+		AE59341721459101007785B6 /* Extension_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE59341621459101007785B6 /* Extension_ViewController.swift */; };
+		AE593419214591D3007785B6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE593418214591D3007785B6 /* RoundedButton.swift */; };
+		AE5C3D562144888C005BECDC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5C3D552144888C005BECDC /* AuthService.swift */; };
 		AE6E6E01212BD08F00E2D64D /* VC_Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E6E00212BD08F00E2D64D /* VC_Chat.swift */; };
 		AE6E6E03212BD0F100E2D64D /* VC_Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E6E02212BD0F100E2D64D /* VC_Channel.swift */; };
 		AE736FB5212D1DFC00DB311E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE736FB4212D1DFC00DB311E /* SWRevealViewController.m */; };
@@ -29,6 +32,9 @@
 		AE578D5A2129D10E008AFBB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE578D5D2129D10E008AFBB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE578D5F2129D10E008AFBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE59341621459101007785B6 /* Extension_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_ViewController.swift; sourceTree = "<group>"; };
+		AE593418214591D3007785B6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		AE5C3D552144888C005BECDC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		AE6E6E00212BD08F00E2D64D /* VC_Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Chat.swift; sourceTree = "<group>"; };
 		AE6E6E02212BD0F100E2D64D /* VC_Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Channel.swift; sourceTree = "<group>"; };
 		AE736FB3212D1DFC00DB311E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/Smack Assets/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 		AE578D522129D106008AFBB8 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				AE5C3D542144884A005BECDC /* Services */,
 				AEAC85EE212F582B005A872E /* Utilities */,
 				AE6E6DFF212BD05600E2D64D /* Controller */,
 				AE6E6DFE212BD04400E2D64D /* View */,
@@ -95,6 +102,14 @@
 				AE578D5F2129D10E008AFBB8 /* Info.plist */,
 			);
 			path = Smack;
+			sourceTree = "<group>";
+		};
+		AE5C3D542144884A005BECDC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AE5C3D552144888C005BECDC /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AE6E6DF8212BC80300E2D64D /* Plugins */ = {
@@ -118,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AE832545212E6F62004FCDD6 /* View_Gradient.swift */,
+				AE593418214591D3007785B6 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				AEAC85EF212F5853005A872E /* Constants.swift */,
+				AE59341621459101007785B6 /* Extension_ViewController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -269,10 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE59341721459101007785B6 /* Extension_ViewController.swift in Sources */,
 				AE832546212E6F62004FCDD6 /* View_Gradient.swift in Sources */,
 				AE6E6E03212BD0F100E2D64D /* VC_Channel.swift in Sources */,
 				AE6E6E01212BD08F00E2D64D /* VC_Chat.swift in Sources */,
+				AE5C3D562144888C005BECDC /* AuthService.swift in Sources */,
 				AE578D542129D106008AFBB8 /* AppDelegate.swift in Sources */,
+				AE593419214591D3007785B6 /* RoundedButton.swift in Sources */,
 				AE736FB5212D1DFC00DB311E /* SWRevealViewController.m in Sources */,
 				AEE518592133471300F214D5 /* VC_NewAccount.swift in Sources */,
 				AEAC85F0212F5853005A872E /* Constants.swift in Sources */,
